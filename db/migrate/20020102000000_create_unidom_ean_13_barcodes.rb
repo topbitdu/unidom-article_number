@@ -2,9 +2,9 @@ class CreateUnidomEan13Barcodes < ActiveRecord::Migration
 
   def change
 
-    create_table :unidom_ean13_barcodes, id: :uuid do |t|
+    create_table :unidom_ean_13_barcodes, id: :uuid do |t|
 
-      t.column :code, 'char(13)',       null: false, default: '0'*13
+      t.column :code,       'char(13)', null: false, default: '0'*13
       t.column :gs1_prefix, 'char(3)',  null: false, default: '0'*3
       t.string :company_number,         null: false, default: '0'*3, limit: 8
       t.string :item_reference,         null: false, default: '0'*2, limit: 6
@@ -20,7 +20,7 @@ class CreateUnidomEan13Barcodes < ActiveRecord::Migration
 
     end
 
-    add_index :unidom_ean13_barcodes, :code, unique: true
+    add_index :unidom_ean_13_barcodes, :code, unique: true
 
   end
 
