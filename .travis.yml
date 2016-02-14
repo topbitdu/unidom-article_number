@@ -1,0 +1,46 @@
+language: ruby
+
+rvm:
+  - 2.2.3
+  - 2.2.2
+  - 2.2.1
+  - 2.1.5
+  - 2.1.4
+  - 2.0.0
+  - 1.9.3
+  - ruby-head
+  - jruby-1.7.19
+  - jruby-9.0.1.0
+  - jruby-9.0.3.0
+  - jruby-9.0.4.0
+  - jruby-head
+  - rbx-2
+
+jdk:
+  - oraclejdk8
+
+sudo: false
+
+branches:
+  only:
+    - master
+
+matrix:
+  include:
+    - rvm: jruby-head
+      jdk: oraclejdk8
+      env: TRUFFLE=1
+  allow_failures:
+    - rvm: ruby-head
+    - rvm: jruby-head
+    - rvm: 1.9.3
+    - rvm: rbx-2
+    - rvm: jruby-head
+      jdk: oraclejdk8
+      env: TRUFFLE=1
+
+before_script:
+  - "echo $JAVA_OPTS"
+  - "export JAVA_OPTS=-Xmx1024m"
+
+# script: if [[ -v TRUFFLE ]]; then support/test-truffle.sh; else RUBYOPT=-w bundle exec rake ci; fi
