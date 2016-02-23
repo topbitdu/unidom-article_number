@@ -6,11 +6,11 @@ require 'unidom/article_number/version'
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.name        = 'unidom-article_number'
-  spec.version     = ::Unidom::ArticleNumber::VERSION
+  spec.version     = Unidom::ArticleNumber::VERSION
   spec.authors     = [ 'Topbit Du' ]
   spec.email       = [ 'topbit.du@gmail.com' ]
   spec.homepage    = 'https://github.com/topbitdu/unidom-article_number'
-  spec.summary     = 'The Article Number domain model engine includes EAN-13, EAN-8, and IMEI models.'
+  spec.summary     = 'Unidom Article Number Domain Model Engine 物品编码领域模型引擎'
   spec.description = 'Unidom (UNIfied Domain Object Model) is a series of domain model engines. The Article Number domain model engine includes EAN-13, EAN-8, and IMEI models. Unidom (统一领域对象模型)是一系列的领域模型引擎。物品编码领域模型引擎包括EAN-13、EAN-8和IMEI的模型。'
   spec.license     = 'MIT'
 
