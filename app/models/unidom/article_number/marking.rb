@@ -12,4 +12,6 @@ class Unidom::ArticleNumber::Marking < ActiveRecord::Base
   scope :marked_by,  ->(marker)  { where marker:  marker  }
   scope :marked_is,  ->(marked)  { where marked:  marked  }
 
+  include Unidom::Common::Concerns::ModelExtension
+
 end

@@ -17,7 +17,7 @@ class Unidom::ArticleNumber::Ean13Barcode < ActiveRecord::Base
 
   has_many :markings, class_name: 'Unidom::ArticleNumber::Marking'
 
-  include ::Unidom::Common::ModelExtension
+  include Unidom::Common::Concerns::ModelExtension
 
   def code=(code)
     code = code.to_s
