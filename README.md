@@ -21,4 +21,5 @@ rake db:migrate
 ## Call the Model
 ```ruby
 Unidom::ArticleNumber::Ean13Barcode.coded_as('1234567890123').valid_at.alive.first.markings
+Unidom::ArticleNumber::Ean8Barcode.coded_as('12345678').valid_at.alive.first.markings
 ```

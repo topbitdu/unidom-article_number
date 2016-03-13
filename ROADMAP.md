@@ -11,3 +11,6 @@
 ## v0.3
 1. EAN-8 Barcode model & migration
 2. Improved the Ruby Gem Specification to depend on unidom-common v0.4.
+
+## v0.4
+1. Code 128 Barcode concern

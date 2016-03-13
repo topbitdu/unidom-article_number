@@ -8,7 +8,6 @@ class Unidom::ArticleNumber::Ean13Barcode < ActiveRecord::Base
 
   self.table_name = 'unidom_ean_13_barcodes'
 
-  #validates :code,           presence: true, length: { is: self.columns_hash['code'].limit  }, numericality: { only_integer: true }, uniqueness: true
   validates :code,           uniqueness: true,                  numericality: { only_integer: true }
   validates :gs1_prefix,     presence: true, length: { is: 3 }, numericality: { only_integer: true }
   validates :company_number, presence: true, length: { is: 4 }, numericality: { only_integer: true }
