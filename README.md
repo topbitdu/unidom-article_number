@@ -24,5 +24,6 @@ ean_13_barcode = Unidom::ArticleNumber::Ean13Barcode.create code: '1234567890123
 ean_8_barcode  = Unidom::ArticleNumber::Ean8Barcode.create  code: '12345678'
 marked  = Product.create name: 'Chocolate'
 marker  = Person.create  name: 'John'
-marking = Unidom::ArticleNumber::Marking.create barcode: ean_13_barcode, marked: marked, marker: marker
+ean_13_marking = Unidom::ArticleNumber::Marking.barcode_is(ean_13_barcode).marked_is(marked).first_or_create marker: marker, opened_at: Time.now
+ean_8_marking = Unidom::ArticleNumber::Marking.barcode_is(ean_8_barcode).marked_is(marked).first_or_create marker: marker, opened_at: Time.now
 ```
