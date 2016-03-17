@@ -20,6 +20,9 @@ rake db:migrate
 
 ## Call the Model
 ```ruby
-Unidom::ArticleNumber::Ean13Barcode.coded_as('1234567890123').valid_at.alive.first.markings
-Unidom::ArticleNumber::Ean8Barcode.coded_as('12345678').valid_at.alive.first.markings
+ean_13_barcode = Unidom::ArticleNumber::Ean13Barcode.create code: '1234567890123'
+ean_8_barcode  = Unidom::ArticleNumber::Ean8Barcode.create  code: '12345678'
+marked  = Product.create name: 'Chocolate'
+marker  = Person.create  name: 'John'
+marking = Unidom::ArticleNumber::Marking.create barcode: ean_13_barcode, marked: marked, marker: marker
 ```
