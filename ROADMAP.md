@@ -13,5 +13,7 @@
 2. Improved the Ruby Gem Specification to depend on unidom-common v0.4
 
 ## v0.4
+1. Improved the Ruby Gem Specification to depend on unidom-common v0.7
+
+## v0.5
 1. Code 128 Barcode concern
-2. Improved the Ruby Gem Specification to depend on unidom-common v0.5

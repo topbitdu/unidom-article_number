@@ -21,6 +21,7 @@ gem 'unidom-article_number'
 ```shell
 rake db:migrate
 ```
+The migration versions start with 200201.
 
 ## Call the Model
 ```ruby
