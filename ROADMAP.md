@@ -12,9 +12,9 @@
 1. EAN-8 Barcode model & migration
 2. Improved the Ruby Gem Specification to depend on unidom-common v0.4
 
-## v0.4
+## v1.0
 1. Improve the Marking model to add the ::mark method
 2. Improve the Ruby Gem Specification to depend on unidom-common v0.9
 
-## v0.5
+## v1.1
 1. Code 128 Barcode concern
