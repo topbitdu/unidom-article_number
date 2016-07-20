@@ -1,19 +1,19 @@
 # EAN-8 Barcode 是8位条形码。
 # https://en.wikipedia.org/wiki/EAN-8
+
 class Unidom::ArticleNumber::Ean8Barcode < ActiveRecord::Base
 
   RESTRICTED_DISTRIBUTION_GS1_PREFIXES = (('020'..'029').to_a + ('040'..'049').to_a + ('200'..'299').to_a).freeze
 
   self.table_name = 'unidom_ean_8_barcodes'
 
+  include Unidom::Common::Concerns::ModelExtension
+  include Unidom::ArticleNumber::Concerns::AsBarcode
+
   validates :code,           uniqueness: true,                  numericality: { only_integer: true }
   validates :gs1_prefix,     presence: true, length: { is: 3 }, numericality: { only_integer: true }
   validates :item_reference, presence: true, length: { is: 4 }, numericality: { only_integer: true }
   validates :check_digit,    presence: true, length: { is: 1 }, numericality: { only_integer: true }
-
-  has_many :markings, class_name: 'Unidom::ArticleNumber::Marking'
-
-  include Unidom::Common::Concerns::ModelExtension
 
   def code=(code)
     code = code.to_s

@@ -32,3 +32,17 @@ marker  = Person.create  name: 'John'
 ean_13_marking = Unidom::ArticleNumber::Marking.barcode_is(ean_13_barcode).marked_is(marked).first_or_create marker: marker, opened_at: Time.now
 ean_8_marking = Unidom::ArticleNumber::Marking.barcode_is(ean_8_barcode).marked_is(marked).first_or_create marker: marker, opened_at: Time.now
 ```
+
+## Include the Concern
+```ruby
+include Unidom::ArticleNumber::Concerns::AsBarcode
+include Unidom::ArticleNumber::Concerns::AsMarked
+```
+
+### As Barcode concern
+The As Barcode concern do the following tasks for the includer automatically:
+1. Define the Has Many macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :barcode``
+
+### As Marked concern
+The As Marked concern do the following tasks for the includer automatically:
+1. Define the Has Many macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :marked``

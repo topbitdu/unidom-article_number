@@ -17,4 +17,20 @@
 2. Improve the Ruby Gem Specification to depend on unidom-common v0.9
 
 ## v1.1
-1. Code 128 Barcode concern
+1. As Barcode concern
+2. As Marked concern
+3. Improve the EAN-13 Barcode model to include the As Barcode concern
+4. Improve the EAN-8 Barcode model to include the As Barcode concern
+5. Improve the Marking model to add the ::mark! method
+6. Improve the Marking model to deprecate the ::mark method
+
+## v1.2
+1. Improve the As Barcode concern to add the #mark! method
+2. Improve the As Marked concern to add the #is_marked! method
+
+## v1.3
+1. As EAN-13 Marked concern
+2. As EAN-8 Marked concern
+
+## v2.0
+1. Remove the deprecated the methods

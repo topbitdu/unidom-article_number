@@ -8,15 +8,14 @@ class Unidom::ArticleNumber::Ean13Barcode < ActiveRecord::Base
 
   self.table_name = 'unidom_ean_13_barcodes'
 
+  include Unidom::Common::Concerns::ModelExtension
+  include Unidom::ArticleNumber::Concerns::AsBarcode
+
   validates :code,           uniqueness: true,                  numericality: { only_integer: true }
   validates :gs1_prefix,     presence: true, length: { is: 3 }, numericality: { only_integer: true }
   validates :company_number, presence: true, length: { is: 4 }, numericality: { only_integer: true }
   validates :item_reference, presence: true, length: { is: 5 }, numericality: { only_integer: true }
   validates :check_digit,    presence: true, length: { is: 1 }, numericality: { only_integer: true }
-
-  has_many :markings, class_name: 'Unidom::ArticleNumber::Marking'
-
-  include Unidom::Common::Concerns::ModelExtension
 
   def code=(code)
     code = code.to_s
