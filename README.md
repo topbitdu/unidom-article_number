@@ -41,8 +41,11 @@ include Unidom::ArticleNumber::Concerns::AsMarked
 
 ### As Barcode concern
 The As Barcode concern do the following tasks for the includer automatically:
-1. Define the Has Many macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :barcode``
+1. Define the has_many :markings macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :barcode``
+2. Define the has_many :marked_products macro as: ``has_many :marked_products, through: :markings, source: :marked, source_type: 'Unidom::Product::Product'``
+3. Define the mark! method as: ``def mark!(marked, by: nil, at: Time.now)``
 
 ### As Marked concern
 The As Marked concern do the following tasks for the includer automatically:
-1. Define the Has Many macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :marked``
+1. Define the has_many :markings macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :marked``
+2. Define the is_marked! method as: ``def is_marked!(as: nil, by: nil, at: Time.now)``

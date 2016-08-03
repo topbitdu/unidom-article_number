@@ -19,3 +19,7 @@
 ## v1.1
 1. As Barcode concern
 2. As Marked concern
+
+## v1.2
+1. Improved the As Barcode concern to add the #mark! method
+2. Improved the As Marked concern to add the #is_marked! method
