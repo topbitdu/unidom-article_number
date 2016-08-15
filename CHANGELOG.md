@@ -10,11 +10,11 @@
 
 ## v0.3
 1. EAN-8 Barcode model & migration
-2. Improved the Ruby Gem Specification to depend on unidom-common v0.4
+2. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.4
 
 ## v1.0
 1. Improved the Marking model to add the ::mark method
-2. Improved the Ruby Gem Specification to depend on unidom-common v0.9
+2. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.9
 
 ## v1.1
 1. As Barcode concern
@@ -23,3 +23,6 @@
 ## v1.2
 1. Improved the As Barcode concern to add the #mark! method
 2. Improved the As Marked concern to add the #is_marked! method
+
+## v1.2.1
+1. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.0
