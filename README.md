@@ -37,6 +37,8 @@ ean_8_marking = Unidom::ArticleNumber::Marking.barcode_is(ean_8_barcode).marked_
 ```ruby
 include Unidom::ArticleNumber::Concerns::AsBarcode
 include Unidom::ArticleNumber::Concerns::AsMarked
+include Unidom::ArticleNumber::Concerns::AsEan13Marked
+include Unidom::ArticleNumber::Concerns::AsEan8Marked
 ```
 
 ### As Barcode concern
@@ -49,3 +51,13 @@ The As Barcode concern do the following tasks for the includer automatically:
 The As Marked concern do the following tasks for the includer automatically:  
 1. Define the has_many :markings macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :marked``
 2. Define the #is_marked! method as: ``def is_marked!(as: nil, by: nil, at: Time.now)``
+
+### As EAN-13 Marked concern
+The As EAN-13 Marked concern do the following tasks for the includer automatically:  
+1. Include the As Marked concern
+2. Define the has_many :ean13_barcodes macro as: ``has_many :ean13_barcodes, through: :markings, source: :barcode, source_type: 'Unidom::ArticleNumber::Ean13Barcode'``
+
+### As EAN-8 Marked concern
+The As EAN-8 Marked concern do the following tasks for the includer automatically:  
+1. Include the As Marked concern
+2. Define the has_many :ean8_barcodes macro as: ``has_many :ean8_barcodes, through: :markings, source: :barcode, source_type: 'Unidom::ArticleNumber::Ean8Barcode'``
