@@ -44,13 +44,14 @@ include Unidom::ArticleNumber::Concerns::AsEan8Marked
 ### As Barcode concern
 The As Barcode concern do the following tasks for the includer automatically:  
 1. Define the has_many :markings macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :barcode``
-2. Define the has_many :marked_products macro as: ``has_many :marked_products, through: :markings, source: :marked, source_type: 'Unidom::Product::Product'``
-3. Define the #mark! method as: ``def mark!(marked, by: nil, at: Time.now)``
+2. Define the #mark! method as: ``def mark!(marked, by: nil, at: Time.now)``
+3. Define the #mark? mathod as: ``def mark?(marked, at: Time.now)``
 
 ### As Marked concern
 The As Marked concern do the following tasks for the includer automatically:  
 1. Define the has_many :markings macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :marked``
 2. Define the #is_marked! method as: ``def is_marked!(as: nil, by: nil, at: Time.now)``
+3. Define the #is_marked? method as: ``def is_marked?(as: nil, at: Time.now)``
 
 ### As EAN-13 Marked concern
 The As EAN-13 Marked concern do the following tasks for the includer automatically:  
