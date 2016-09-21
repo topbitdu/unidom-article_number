@@ -41,3 +41,7 @@
 
 ## v2.0
 1. Remove the deprecated the methods
+
+## v2.1
+1. ISBN-10 Barcode model & migration
+2. ISBN-13 Barcode model & migration
