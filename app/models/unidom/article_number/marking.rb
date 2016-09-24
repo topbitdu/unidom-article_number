@@ -14,10 +14,6 @@ class Unidom::ArticleNumber::Marking < ActiveRecord::Base
   scope :marked_by,  ->(marker)  { where marker:  marker  }
   scope :marked_is,  ->(marked)  { where marked:  marked  }
 
-  def self.mark(barcode: nil, marked: nil, marker: nil, opened_at: Time.now)
-    self.mark! barcode: barcode, marked: marked, marker: marker, opened_at: opened_at
-  end
-
   def self.mark!(barcode: nil, marked: nil, marker: nil, opened_at: Time.now)
 
     raise ArgumentError.new('The barcode argument is required.'  ) if barcode.blank?
@@ -34,10 +30,6 @@ class Unidom::ArticleNumber::Marking < ActiveRecord::Base
     end
     query.first_or_create! creation
 
-  end
-
-  class << self
-    deprecate mark: :mark!, deprecator: ActiveSupport::Deprecation.new('2.0', 'unidom-article_number')
   end
 
 end
