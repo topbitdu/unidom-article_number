@@ -1,5 +1,5 @@
 module Unidom
   module ArticleNumber
-    VERSION = '1.4'.freeze
+    VERSION = '2.0'.freeze
   end
 end

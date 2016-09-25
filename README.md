@@ -27,10 +27,10 @@ The migration versions start with 200201.
 ```ruby
 ean_13_barcode = Unidom::ArticleNumber::Ean13Barcode.create code: '1234567890123'
 ean_8_barcode  = Unidom::ArticleNumber::Ean8Barcode.create  code: '12345678'
-marked  = Product.create name: 'Chocolate'
-marker  = Person.create  name: 'John'
-ean_13_marking = Unidom::ArticleNumber::Marking.barcode_is(ean_13_barcode).marked_is(marked).first_or_create marker: marker, opened_at: Time.now
-ean_8_marking = Unidom::ArticleNumber::Marking.barcode_is(ean_8_barcode).marked_is(marked).first_or_create marker: marker, opened_at: Time.now
+marked         = Unidom::Product::Product.create! name: 'Chocolate', abbreviation: 'Choc', packing_norm: '12 blocks', measurement_unit: 'box'
+marker         = Unidom::Party::Person.create!    name: 'John'
+ean_13_marking = Unidom::ArticleNumber::Marking.mark! barcode: ean_13_barcode, marked: marked, marker: marker, opened_at: Time.now
+ean_8_marking  = Unidom::ArticleNumber::Marking.mark! barcode: ean_8_barcode,  marked: marked, marker: marker, opened_at: Time.now
 ```
 
 ## Include the Concern
@@ -44,14 +44,14 @@ include Unidom::ArticleNumber::Concerns::AsEan8Marked
 ### As Barcode concern
 The As Barcode concern do the following tasks for the includer automatically:  
 1. Define the has_many :markings macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :barcode``
-2. Define the #mark! method as: ``def mark!(marked, by: nil, at: Time.now)``
-3. Define the #mark? mathod as: ``def mark?(marked, at: Time.now)``
+2. Define the #mark! method as: ``mark!(marked, by: nil, at: Time.now)``
+3. Define the #mark? mathod as: ``mark?(marked, at: Time.now)``
 
 ### As Marked concern
 The As Marked concern do the following tasks for the includer automatically:  
 1. Define the has_many :markings macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :marked``
-2. Define the #is_marked! method as: ``def is_marked!(as: nil, by: nil, at: Time.now)``
-3. Define the #is_marked? method as: ``def is_marked?(as: nil, at: Time.now)``
+2. Define the #is_marked! method as: ``is_marked!(as: nil, by: nil, at: Time.now)``
+3. Define the #is_marked? method as: ``is_marked?(as: nil, at: Time.now)``
 
 ### As EAN-13 Marked concern
 The As EAN-13 Marked concern do the following tasks for the includer automatically:  
