@@ -22,4 +22,7 @@ module Unidom::ArticleNumber::Concerns::AsBarcode
 
   end
 
+  module ClassMethods
+  end
+
 end
