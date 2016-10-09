@@ -10,4 +10,7 @@ module Unidom::ArticleNumber::Concerns::AsEan8Marked
 
   end
 
+  module ClassMethods
+  end
+
 end
