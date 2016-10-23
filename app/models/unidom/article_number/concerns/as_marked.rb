@@ -21,4 +21,7 @@ module Unidom::ArticleNumber::Concerns::AsMarked
 
   end
 
+  module ClassMethods
+  end
+
 end
