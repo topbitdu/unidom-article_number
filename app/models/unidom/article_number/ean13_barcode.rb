@@ -2,7 +2,7 @@
 # https://en.wikipedia.org/wiki/EAN-13
 # https://en.wikipedia.org/wiki/International_Article_Number_(EAN)
 
-class Unidom::ArticleNumber::Ean13Barcode < ActiveRecord::Base
+class Unidom::ArticleNumber::Ean13Barcode < Unidom::ArticleNumber::ApplicationRecord
 
   RESTRICTED_DISTRIBUTION_GS1_PREFIXES = (('020'..'029').to_a + ('040'..'049').to_a + ('200'..'299').to_a).freeze
 
