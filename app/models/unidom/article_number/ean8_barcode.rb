@@ -1,7 +1,7 @@
 # EAN-8 Barcode 是8位条形码。
 # https://en.wikipedia.org/wiki/EAN-8
 
-class Unidom::ArticleNumber::Ean8Barcode < ActiveRecord::Base
+class Unidom::ArticleNumber::Ean8Barcode < Unidom::ArticleNumber::ApplicationRecord
 
   RESTRICTED_DISTRIBUTION_GS1_PREFIXES = (('020'..'029').to_a + ('040'..'049').to_a + ('200'..'299').to_a).freeze
 
