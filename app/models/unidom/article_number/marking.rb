@@ -1,6 +1,6 @@
 # Marking 是条码和物品的标记关系。
 
-class Unidom::ArticleNumber::Marking < ActiveRecord::Base
+class Unidom::ArticleNumber::Marking < Unidom::ArticleNumber::ApplicationRecord
 
   self.table_name = 'unidom_markings'
 
