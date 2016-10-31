@@ -8,7 +8,7 @@ module Unidom::ArticleNumber::Concerns::Code128Barcode
 
   extend ActiveSupport::Concern
 
-  self.included do |includer|
+  included do |includer|
 
     validates :code, uniqueness: true
     validates :code, numericality: { only_integer: true }, if: Proc.new { |barcode| 'C'==barcode.code_set_code }
