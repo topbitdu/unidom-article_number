@@ -1,7 +1,7 @@
 # Unidom Article Number Roadmap 物品编码领域模型引擎路线图
 
 ## v0.1
-1. Marking model & migration
+1. Marking model & migration (20020101000000)
 2. EAN-13 Barcode model & migration
 
 ## v0.2
