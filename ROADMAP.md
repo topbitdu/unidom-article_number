@@ -2,7 +2,7 @@
 
 ## v0.1
 1. Marking model & migration (20020101000000)
-2. EAN-13 Barcode model & migration
+2. EAN-13 Barcode model & migration (20020102000000)
 
 ## v0.2
 1. Improved the Marking model to include the Model Extension concern
