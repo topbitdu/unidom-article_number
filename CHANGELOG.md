@@ -9,7 +9,7 @@
 2. Improved the EAN-13 Barcode model to include the Model Extension concern
 
 ## v0.3
-1. EAN-8 Barcode model & migration
+1. EAN-8 Barcode model & migration (20020103000000)
 2. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.4
 
 ## v1.0
