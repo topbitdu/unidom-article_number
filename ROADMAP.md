@@ -49,5 +49,4 @@
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7
 
 ## v2.1
-1. ISBN-10 Barcode model & migration
-2. ISBN-13 Barcode model & migration
+1. Vehicle Identification Number validator
