@@ -13,7 +13,7 @@
 2. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.4
 
 ## v1.0
-1. Improved the Marking model to add the ::mark method
+1. Improved the Marking model to add the .``mark`` method
 2. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.9
 
 ## v1.1
