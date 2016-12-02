@@ -82,3 +82,13 @@ The As EAN-13 Marked concern do the following tasks for the includer automatical
 The As EAN-8 Marked concern do the following tasks for the includer automatically:  
 1. Include the As Marked concern  
 2. Define the has_many :ean8_barcodes macro as: ``has_many :ean8_barcodes, through: :markings, source: :barcode, source_type: 'Unidom::ArticleNumber::Ean8Barcode'``
+
+
+
+## Validator
+
+### Vehicle Identification Number validator
+
+```ruby
+validates :vin, presence: true, 'unidom/article_number/vehicle_identification_number': true
+```

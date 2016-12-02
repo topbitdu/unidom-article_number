@@ -47,3 +47,6 @@
 
 ## v2.0.2
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7
+
+## v2.1
+1. Vehicle Identification Number validator
