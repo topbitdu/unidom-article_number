@@ -38,12 +38,16 @@ The migration versions start with 200201.
 ## Call the Model
 
 ```ruby
-ean_13_barcode = Unidom::ArticleNumber::Ean13Barcode.create code: '1234567890123'
-ean_8_barcode  = Unidom::ArticleNumber::Ean8Barcode.create  code: '12345678'
+ean_13_barcode = Unidom::ArticleNumber::Ean13Barcode.create! code: '1234567890123'
+ean_8_barcode  = Unidom::ArticleNumber::Ean8Barcode.create!  code: '12345678'
 marked         = Unidom::Product::Product.create! name: 'Chocolate', abbreviation: 'Choc', packing_norm: '12 blocks', measurement_unit: 'box'
 marker         = Unidom::Party::Person.create!    name: 'John'
 ean_13_marking = Unidom::ArticleNumber::Marking.mark! barcode: ean_13_barcode, marked: marked, marker: marker, opened_at: Time.now
 ean_8_marking  = Unidom::ArticleNumber::Marking.mark! barcode: ean_8_barcode,  marked: marked, marker: marker, opened_at: Time.now
+
+vin       = Unidom::ArticleNumber::VehicleIdentificationNumber.create! code: 'LVHCU165XD5002138'
+# The Vehicle Identification Number Validator is enabled on the code field by default.
+found_vin = Unidom::ArticleNumber::VehicleIdentificationNumber.coded_as('LVHCU165XD5002138').first
 ```
 
 

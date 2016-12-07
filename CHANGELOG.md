@@ -50,3 +50,6 @@
 
 ## v2.1
 1. Vehicle Identification Number validator
+
+## v2.2
+1. Vehicle Identification Number model & migration
