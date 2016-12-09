@@ -52,4 +52,4 @@
 1. Vehicle Identification Number validator
 
 ## v2.2
-1. Vehicle Identification Number model & migration
+1. Vehicle Identification Number model & migration (20020111000000)
