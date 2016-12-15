@@ -22,7 +22,7 @@
 3. Improve the EAN-13 Barcode model to include the As Barcode concern
 4. Improve the EAN-8 Barcode model to include the As Barcode concern
 5. Improve the Marking model to add the .``mark!`` method
-6. Improve the Marking model to deprecate the ::mark method
+6. Improve the Marking model to deprecate the .``mark`` method
 
 ## v1.2
 1. Improved the As Barcode concern to add the #mark! method
