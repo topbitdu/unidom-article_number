@@ -25,7 +25,7 @@
 6. Improve the Marking model to deprecate the .``mark`` method
 
 ## v1.2
-1. Improve the As Barcode concern to add the #mark! method
+1. Improve the As Barcode concern to add the #``mark!`` method
 2. Improve the As Marked concern to add the #is_marked! method
 
 ## v1.2.1
