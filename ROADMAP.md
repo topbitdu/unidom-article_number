@@ -26,7 +26,7 @@
 
 ## v1.2
 1. Improve the As Barcode concern to add the #``mark!`` method
-2. Improve the As Marked concern to add the #is_marked! method
+2. Improve the As Marked concern to add the #``is_marked!`` method
 
 ## v1.2.1
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.0
