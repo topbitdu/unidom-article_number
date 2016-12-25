@@ -36,7 +36,7 @@
 2. As EAN-8 Marked concern
 
 ## v1.4
-1. Improved the As Barcode concern to add the #mark? method
+1. Improved the As Barcode concern to add the #``mark?`` method
 2. Improved the As Marked concern to add the #is_marked? method
 
 ## v2.0
