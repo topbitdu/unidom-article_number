@@ -37,7 +37,7 @@
 
 ## v1.4
 1. Improved the As Barcode concern to add the #``mark?`` method
-2. Improved the As Marked concern to add the #is_marked? method
+2. Improved the As Marked concern to add the #``is_marked?`` method
 
 ## v2.0
 1. Removed the deprecated the methods
