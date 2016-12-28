@@ -1,3 +1,4 @@
+##
 # EAN-13 Barcode 是13位条形码。
 # https://en.wikipedia.org/wiki/EAN-13
 # https://en.wikipedia.org/wiki/International_Article_Number_(EAN)
