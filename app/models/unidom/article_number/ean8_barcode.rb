@@ -1,3 +1,4 @@
+##
 # EAN-8 Barcode 是8位条形码。
 # https://en.wikipedia.org/wiki/EAN-8
 
