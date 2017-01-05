@@ -1,3 +1,4 @@
+##
 # Marking 是条码和物品的标记关系。
 
 class Unidom::ArticleNumber::Marking < Unidom::ArticleNumber::ApplicationRecord
