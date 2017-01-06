@@ -1,3 +1,4 @@
+##
 # VIN (Vehicle Identification Number) 是车辆识别码。
 # https://en.wikipedia.org/wiki/Vehicle_identification_number
 # GB 16735-2004
