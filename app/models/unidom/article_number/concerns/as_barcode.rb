@@ -1,3 +1,6 @@
+##
+# As Barcode 是条形码的领域逻辑关注点。
+
 module Unidom::ArticleNumber::Concerns::AsBarcode
 
   extend ActiveSupport::Concern
