@@ -9,7 +9,9 @@ class Unidom::ArticleNumber::VehicleIdentificationNumberValidator < ActiveModel:
 
   def validate_each(record, attribute, value)
     value = value.to_s.upcase
-    if value.match /I|O|Q/
+    if value.length>17
+      record.errors[attribute] << (options[:message]||'The length should be 17')
+    elsif value.match /I|O|Q/
       record.errors[attribute] << (options[:message]||'I, O, Q should be excluded')
     else
       record.errors[attribute] << (options[:message]||'is invalid') unless check_digit(value)==value[8]
