@@ -1,5 +1,6 @@
 # Unidom Article Number 物品编码领域模型引擎
 
+[![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/gems/unidom-article_number/frames)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT)
 [![Gem Version](https://badge.fury.io/rb/unidom-article_number.svg)](https://badge.fury.io/rb/unidom-article_number)
 [![Dependency Status](https://gemnasium.com/badges/github.com/topbitdu/unidom-accession.svg)](https://gemnasium.com/github.com/topbitdu/unidom-accession)
@@ -63,28 +64,28 @@ include Unidom::ArticleNumber::Concerns::AsEan8Marked
 
 ### As Barcode concern
 
-The As Barcode concern do the following tasks for the includer automatically:  
-1. Define the has_many :markings macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :barcode``  
-2. Define the #mark! method as: ``mark!(marked, by: nil, at: Time.now)``  
+The As Barcode concern do the following tasks for the includer automatically:
+1. Define the has_many :markings macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :barcode``
+2. Define the #mark! method as: ``mark!(marked, by: nil, at: Time.now)``
 3. Define the #mark? mathod as: ``mark?(marked, at: Time.now)``
 
 ### As Marked concern
 
-The As Marked concern do the following tasks for the includer automatically:  
-1. Define the has_many :markings macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :marked``  
-2. Define the #is_marked! method as: ``is_marked!(as: nil, by: nil, at: Time.now)``  
+The As Marked concern do the following tasks for the includer automatically:
+1. Define the has_many :markings macro as: ``has_many :markings, class_name: 'Unidom::ArticleNumber::Marking', as: :marked``
+2. Define the #is_marked! method as: ``is_marked!(as: nil, by: nil, at: Time.now)``
 3. Define the #is_marked? method as: ``is_marked?(as: nil, at: Time.now)``
 
 ### As EAN-13 Marked concern
 
-The As EAN-13 Marked concern do the following tasks for the includer automatically:  
-1. Include the As Marked concern  
+The As EAN-13 Marked concern do the following tasks for the includer automatically:
+1. Include the As Marked concern
 2. Define the has_many :ean13_barcodes macro as: ``has_many :ean13_barcodes, through: :markings, source: :barcode, source_type: 'Unidom::ArticleNumber::Ean13Barcode'``
 
 ### As EAN-8 Marked concern
 
-The As EAN-8 Marked concern do the following tasks for the includer automatically:  
-1. Include the As Marked concern  
+The As EAN-8 Marked concern do the following tasks for the includer automatically:
+1. Include the As Marked concern
 2. Define the has_many :ean8_barcodes macro as: ``has_many :ean8_barcodes, through: :markings, source: :barcode, source_type: 'Unidom::ArticleNumber::Ean8Barcode'``
 
 
