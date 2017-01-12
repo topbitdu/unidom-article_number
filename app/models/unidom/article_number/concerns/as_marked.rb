@@ -1,3 +1,6 @@
+##
+# As Marked 是被条形码标注的物品的领域逻辑关注点。
+
 module Unidom::ArticleNumber::Concerns::AsMarked
 
   extend ActiveSupport::Concern
