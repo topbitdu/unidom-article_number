@@ -33,4 +33,4 @@ class Unidom::ArticleNumber::Marking < Unidom::ArticleNumber::ApplicationRecord
 
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::ArticleNumber::Marking'
