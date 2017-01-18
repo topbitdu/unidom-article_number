@@ -27,4 +27,4 @@ class Unidom::ArticleNumber::VehicleIdentificationNumber < Unidom::ArticleNumber
     end
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::ArticleNumber::VehicleIdentificationNumber'
