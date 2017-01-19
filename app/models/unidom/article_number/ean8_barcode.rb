@@ -30,4 +30,4 @@ class Unidom::ArticleNumber::Ean8Barcode < Unidom::ArticleNumber::ApplicationRec
     self.class::RESTRICTED_DISTRIBUTION_GS1_PREFIXES.include? gs1_prefix
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::ArticleNumber::Ean8Barcode'
