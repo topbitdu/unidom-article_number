@@ -33,4 +33,4 @@ class Unidom::ArticleNumber::Ean13Barcode < Unidom::ArticleNumber::ApplicationRe
     self.class::RESTRICTED_DISTRIBUTION_GS1_PREFIXES.include? gs1_prefix
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::ArticleNumber::Ean13Barcode'
