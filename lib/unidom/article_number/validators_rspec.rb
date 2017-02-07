@@ -1,0 +1,1 @@
+require 'rspec/types/unidom/article_number/vehicle_identification_number_validator_spec'
