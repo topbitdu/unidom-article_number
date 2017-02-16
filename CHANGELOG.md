@@ -73,3 +73,6 @@
 ## v2.3.1
 1. Vehicle Identification Number Validator spec
 2. Improve the Validators RSpec examples manifest to add the Vehicle Identification Number Validator spec
+
+## v2.3.2
+1. Move the Vehicle Identification Number Validator spec from the Types RSpec examples manifest to the Validators RSpec examples manifest
