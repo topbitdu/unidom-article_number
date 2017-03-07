@@ -11,10 +11,10 @@ class Unidom::ArticleNumber::Ean8Barcode < Unidom::ArticleNumber::ApplicationRec
   include Unidom::Common::Concerns::ModelExtension
   include Unidom::ArticleNumber::Concerns::AsBarcode
 
-  validates :code,           uniqueness: true,                  numericality: { only_integer: true }
-  validates :gs1_prefix,     presence: true, length: { is: 3 }, numericality: { only_integer: true }
-  validates :item_reference, presence: true, length: { is: 4 }, numericality: { only_integer: true }
-  validates :check_digit,    presence: true, length: { is: 1 }, numericality: { only_integer: true }
+  validates :code,           uniqueness: true, length: { minimum: 8 }, numericality: { only_integer: true }
+  validates :gs1_prefix,     presence:   true, length: { is:      3 }, numericality: { only_integer: true }
+  validates :item_reference, presence:   true, length: { is:      4 }, numericality: { only_integer: true }
+  validates :check_digit,    presence:   true, length: { is:      1 }, numericality: { only_integer: true }
 
   def code=(code)
     code = code.to_s
