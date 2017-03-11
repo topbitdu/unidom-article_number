@@ -83,3 +83,7 @@
 ## v2.3.4
 1. Improve the EAN-13 Barcode model for the validations on the #code attribute
 2. Improve the EAN-13 Barcode spec for the validations on the #code attribute
+
+## v2.3.5
+1. Improve the EAN-8 Barcode model for the validations on the #code attribute
+2. Improve the EAN-8 Barcode spec for the validations on the #code attribute
