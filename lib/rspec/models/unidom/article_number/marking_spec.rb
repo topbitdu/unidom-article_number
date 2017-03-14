@@ -19,20 +19,7 @@ describe Unidom::ArticleNumber::Marking, type: :model do
 
     it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
 
-    it_behaves_like 'scope', :barcode_is, [
-      { attributes_collection: [ model_attributes                                                                           ], count_diff: 0, args: [ Unidom::ArticleNumber::Ean13Barcode.new(               id: model_attributes[:barcode_id]) ] },
-      { attributes_collection: [ model_attributes                                                                           ], count_diff: 0, args: [ Unidom::ArticleNumber::Ean8Barcode.new(                id: model_attributes[:barcode_id]) ] },
-      { attributes_collection: [ model_attributes                                                                           ], count_diff: 0, args: [ Unidom::ArticleNumber::VehicleIdentificationNumber.new(id: model_attributes[:barcode_id]) ] },
-      { attributes_collection: [ model_attributes.merge(barcode_type: 'Unidom::ArticleNumber::Ean13Barcode'               ) ], count_diff: 1, args: [ Unidom::ArticleNumber::Ean13Barcode.new(               id: model_attributes[:barcode_id]) ] },
-      { attributes_collection: [ model_attributes.merge(barcode_type: 'Unidom::ArticleNumber::Ean13Barcode'               ) ], count_diff: 0, args: [ Unidom::ArticleNumber::Ean8Barcode.new(                id: model_attributes[:barcode_id]) ] },
-      { attributes_collection: [ model_attributes.merge(barcode_type: 'Unidom::ArticleNumber::Ean13Barcode'               ) ], count_diff: 0, args: [ Unidom::ArticleNumber::VehicleIdentificationNumber.new(id: model_attributes[:barcode_id]) ] },
-      { attributes_collection: [ model_attributes.merge(barcode_type: 'Unidom::ArticleNumber::Ean8Barcode'                ) ], count_diff: 0, args: [ Unidom::ArticleNumber::Ean13Barcode.new(               id: model_attributes[:barcode_id]) ] },
-      { attributes_collection: [ model_attributes.merge(barcode_type: 'Unidom::ArticleNumber::Ean8Barcode'                ) ], count_diff: 1, args: [ Unidom::ArticleNumber::Ean8Barcode.new(                id: model_attributes[:barcode_id]) ] },
-      { attributes_collection: [ model_attributes.merge(barcode_type: 'Unidom::ArticleNumber::Ean8Barcode'                ) ], count_diff: 0, args: [ Unidom::ArticleNumber::VehicleIdentificationNumber.new(id: model_attributes[:barcode_id]) ] },
-      { attributes_collection: [ model_attributes.merge(barcode_type: 'Unidom::ArticleNumber::VehicleIdentificationNumber') ], count_diff: 0, args: [ Unidom::ArticleNumber::Ean13Barcode.new(               id: model_attributes[:barcode_id]) ] },
-      { attributes_collection: [ model_attributes.merge(barcode_type: 'Unidom::ArticleNumber::VehicleIdentificationNumber') ], count_diff: 0, args: [ Unidom::ArticleNumber::Ean8Barcode.new(                id: model_attributes[:barcode_id]) ] },
-      { attributes_collection: [ model_attributes.merge(barcode_type: 'Unidom::ArticleNumber::VehicleIdentificationNumber') ], count_diff: 1, args: [ Unidom::ArticleNumber::VehicleIdentificationNumber.new(id: model_attributes[:barcode_id]) ] }
-    ]
+    it_behaves_like 'polymorphic scope', model_attributes, :barcode_is, :barcode, [ Unidom::ArticleNumber::Ean13Barcode, Unidom::ArticleNumber::Ean8Barcode, Unidom::ArticleNumber::VehicleIdentificationNumber ]
 
   end
 
