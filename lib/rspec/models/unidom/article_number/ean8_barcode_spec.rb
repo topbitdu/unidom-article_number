@@ -12,10 +12,10 @@ describe Unidom::ArticleNumber::Ean8Barcode, type: :model do
       code: '12345678'
     }
 
+    it_behaves_like 'Unidom::Common::Concerns::ModelExtension',   model_attributes
+    it_behaves_like 'Unidom::ArticleNumber::Concerns::AsBarcode', model_attributes
+
     code_max_length = described_class.columns_hash['code'].limit
-
-    it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
-
     it_behaves_like 'validates', model_attributes, :code,
       {             } => 0,
       { code: nil   } => 3,
