@@ -12,7 +12,8 @@ describe Unidom::ArticleNumber::VehicleIdentificationNumber, type: :model do
       code: 'LVHCU165XD5002138'
     }
 
-    it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
+    it_behaves_like 'Unidom::Common::Concerns::ModelExtension',   model_attributes
+    it_behaves_like 'Unidom::ArticleNumber::Concerns::AsBarcode', model_attributes
 
     it_behaves_like 'validates', model_attributes, :code,
       {             } => 0,
