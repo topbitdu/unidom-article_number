@@ -13,10 +13,10 @@ class Unidom::ArticleNumber::Ean13Barcode < Unidom::ArticleNumber::ApplicationRe
   include Unidom::ArticleNumber::Concerns::AsBarcode
 
   validates :code,           uniqueness: true, length: { minimum: 13 }, numericality: { only_integer: true }
-  validates :gs1_prefix,     presence: true,   length: { is:       3 }, numericality: { only_integer: true }
-  validates :company_number, presence: true,   length: { is:       4 }, numericality: { only_integer: true }
-  validates :item_reference, presence: true,   length: { is:       5 }, numericality: { only_integer: true }
-  validates :check_digit,    presence: true,   length: { is:       1 }, numericality: { only_integer: true }
+  validates :gs1_prefix,     presence:   true, length: { is:       3 }, numericality: { only_integer: true }
+  validates :company_number, presence:   true, length: { is:       4 }, numericality: { only_integer: true }
+  validates :item_reference, presence:   true, length: { is:       5 }, numericality: { only_integer: true }
+  validates :check_digit,    presence:   true, length: { is:       1 }, numericality: { only_integer: true }
 
   def code=(code)
     code = code.to_s
