@@ -120,6 +120,8 @@ end
 
 ## RSpec examples
 
+### RSpec example manifest (run automatically)
+
 ```ruby
 # spec/models/unidom_spec.rb
 require 'unidom/article_number/models_rspec'
@@ -129,4 +131,32 @@ require 'unidom/article_number/types_rspec'
 
 # spec/validators/unidom_spec.rb
 require 'unidom/article_number/validators_rspec'
+```
+
+### RSpec shared examples (to be integrated)
+
+```ruby
+# The Unidom::ArticleNumber::Ean13Barcode model, the Unidom::ArticleNumber::Ean8Barcode model, & the Unidom::ArticleNumber::VehicleIdentificationNumber model already include the Unidom::ArticleNumber::Concerns::AsBarcode concern
+
+# app/models/your_barcode.rb
+class YourBarcode < ActiveRecord::Base
+
+  include Unidom::Common::Concerns::ModelExtension
+  include Unidom::ArticleNumber::Concerns::AsBarcode
+
+end
+
+# spec/support/unidom_rspec_shared_examples.rb
+require 'unidom/article_number/rspec_shared_examples'
+
+# spec/models/your_barcode_spec.rb
+describe YourBarcode do
+
+  model_attribtues = {
+    code: 'AABBCCDDEEFF'
+  }
+
+  it_behaves_like 'Unidom::ArticleNumber::Concerns::AsBarcode', model_attribtues
+
+end
 ```
