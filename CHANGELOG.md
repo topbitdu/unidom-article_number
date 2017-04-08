@@ -59,7 +59,7 @@
 2. Improved the Engine class to include the Engine Extension
 
 ## v2.2.2
-1. Improve the Vehicle Identification Number validator for the I, O, & Q
+1. Improved the Vehicle Identification Number validator for the I, O, & Q
 
 ## v2.2.3
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.9
