@@ -75,7 +75,7 @@
 2. Improved the Validators RSpec examples manifest to add the Vehicle Identification Number Validator spec
 
 ## v2.3.2
-1. Move the Vehicle Identification Number Validator spec from the Types RSpec examples manifest to the Validators RSpec examples manifest
+1. Moved the Vehicle Identification Number Validator spec from the Types RSpec examples manifest to the Validators RSpec examples manifest
 
 ## v2.3.3
 1. Improve the Marking spec for the barcode_is scope
