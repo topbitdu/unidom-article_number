@@ -78,7 +78,7 @@
 1. Moved the Vehicle Identification Number Validator spec from the Types RSpec examples manifest to the Validators RSpec examples manifest
 
 ## v2.3.3
-1. Improve the Marking spec for the barcode_is scope
+1. Improved the Marking spec for the barcode_is scope
 
 ## v2.3.4
 1. Improve the EAN-13 Barcode model for the validations on the #code attribute
