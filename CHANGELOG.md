@@ -81,7 +81,7 @@
 1. Improved the Marking spec for the barcode_is scope
 
 ## v2.3.4
-1. Improve the EAN-13 Barcode model for the validations on the #code attribute
+1. Improved the EAN-13 Barcode model for the validations on the #code attribute
 2. Improve the EAN-13 Barcode spec for the validations on the #code attribute
 
 ## v2.3.5
