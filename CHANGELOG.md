@@ -96,5 +96,5 @@
 1. As Barcode shared examples
 2. RSpec shared examples manifest
 3. Improved the EAN-13 Barcode spec for the As Barcode concern
-4. Improve the EAN-8 Barcode spec for the As Barcode concern
+4. Improved the EAN-8 Barcode spec for the As Barcode concern
 5. Improve the Vehicle Identification Number spec for the As Barcode concern
